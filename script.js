@@ -68,3 +68,62 @@ const currencies = new Map([
 ]);
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
+
+  movements.forEach((move, i) => {
+    const type = move > 0 ? 'deposit' : 'withdrawal';
+    const html = `<div class="movements__row">
+                  <div class="movements__type movements__type--${type}"> ${i} ${type}</div>
+                  <div class="movements__date">3 days ago</div>
+                  <div class="movements__value">${Math.abs(move)} RS</div>
+                </div>`;
+
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+
+displayMovements(account1.movements);
+
+const addDisplayMoney = function (movements) {
+  const displayMoney = movements.reduce(function (acc, move) {
+    return acc + move;
+  });
+
+  labelBalance.innerHTML = displayMoney + ' RS';
+};
+
+addDisplayMoney(account1.movements);
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+// // Challenge
+
+// const checkDogs = function (arr1, arr2) {
+//   const [...onlyDogsJulia] = arr1.slice(2, arr1.length);
+//   // console.log(onlyDogsJulia);
+
+//   const totalDOgs = onlyDogsJulia.concat(arr2);
+//   console.log(totalDOgs);
+
+//   totalDOgs.forEach((age, i) => {
+//     if (age >= 3) {
+//       console.log('====================================');
+//       console.log(`Dog number ${i} is an adult and is ${age} years old`);
+//       console.log('====================================');
+//     } else {
+//       console.log('====================================');
+//       console.log(`Dog number ${i} is still puppy 🐶`);
+//       console.log('====================================');
+//     }
+//   });
+// };
+
+// const julia = [3, 5, 2, 12, 7];
+// const kate = [4, 1, 15, 8, 3];
+
+// checkDogs(julia, kate);
