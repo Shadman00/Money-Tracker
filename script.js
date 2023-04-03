@@ -96,6 +96,19 @@ const addDisplayMoney = function (movements) {
 
 addDisplayMoney(account1.movements);
 
+let main_app = document.getElementById("main-app");
+main_app.style.display = "none";
+
+// login function
+function login(pin) {
+    // condition for exist - temp value
+    let exists = "ok";
+    if (exists) {
+        var login_card = document.getElementById("login-card");
+        login_card.style.display = "none";
+        main_app.style.display = "grid";
+    }
+}
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////

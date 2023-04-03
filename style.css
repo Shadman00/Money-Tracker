@@ -288,3 +288,55 @@ h2 {
 .timer {
   font-weight: 600;
 }
+/*login card css*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  text-align: center;
+  width: 400px;
+}
+
+.card h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.card input[type="text"] {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+}
+
+.card input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px;
+  width: 100%;
+}
+
+.card button:hover {
+  background-color: #3e8e41;
+}
+/*login card css ends*/
