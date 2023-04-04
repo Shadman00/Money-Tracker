@@ -9,28 +9,28 @@ const account1 = {
   owner: 'Zaheer Khan',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
-  pin: 1111,
+  pin: "1111",
 };
 
 const account2 = {
   owner: 'Fareed Khan',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1,
-  pin: 2222,
+  pin: "2222",
 };
 
 const account3 = {
   owner: 'Aman Shaikh',
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
-  pin: 3333,
+  pin: "3333",
 };
 
 const account4 = {
   owner: 'Shadman Shaikh',
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
-  pin: 4444,
+  pin: "4444",
 };
 
 const accounts = [account1, account2, account3, account4];
@@ -96,17 +96,30 @@ const addDisplayMoney = function (movements) {
 
 addDisplayMoney(account1.movements);
 
+// login function
+
 let main_app = document.getElementById("main-app");
 main_app.style.display = "none";
 
-// login function
-function login(pin) {
-    // condition for exist - temp value
-    let exists = "ok";
-    if (exists) {
+function login() {
+    var pin_x = document.getElementById('pin').value;
+    const isPinMatched = accounts.some(account => account.pin === pin_x);
+
+    const input = document.getElementById('pin');
+    var error_message = document.getElementById("error-message");
+    if (!pin_x) {
+        input.setCustomValidity('Please enter a PIN.');
+        input.reportValidity();
+    } else if (isPinMatched) {
+        input.setCustomValidity('');
+        input.reportValidity();
         var login_card = document.getElementById("login-card");
         login_card.style.display = "none";
         main_app.style.display = "grid";
+    } else {
+        input.setCustomValidity('Incorrect PIN');
+        input.reportValidity();
+        error_message.style.display = "block";
     }
 }
 /////////////////////////////////////////////////////
