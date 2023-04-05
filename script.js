@@ -98,28 +98,27 @@ addDisplayMoney(account1.movements);
 
 // login function
 
-let main_app = document.getElementById("main-app");
-main_app.style.display = "none";
+let mainApp = document.getElementById("main-app");
+mainApp.style.display = "none";
 
 function login() {
-    var pin_x = document.getElementById('pin').value;
-    const isPinMatched = accounts.some(account => account.pin === pin_x);
-
-    const input = document.getElementById('pin');
-    var error_message = document.getElementById("error-message");
-    if (!pin_x) {
-        input.setCustomValidity('Please enter a PIN.');
-        input.reportValidity();
+    var enteredPin = document.getElementById('pin').value;
+    const isPinMatched = accounts.some(account => account.pin === enteredPin);
+    const pinIinputField = document.getElementById('pin');
+    
+    if (!enteredPin) {
+        pinIinputField.setCustomValidity('Please enter a PIN.');
+        pinIinputField.reportValidity();
     } else if (isPinMatched) {
-        input.setCustomValidity('');
-        input.reportValidity();
-        var login_card = document.getElementById("login-card");
-        login_card.style.display = "none";
-        main_app.style.display = "grid";
+        pinIinputField.setCustomValidity('');
+        pinIinputField.reportValidity();
+        var loginCard = document.getElementById("login-card");
+        loginCard.style.display = "none";
+        mainApp.style.display = "grid";
     } else {
-        input.setCustomValidity('Incorrect PIN');
-        input.reportValidity();
-        error_message.style.display = "block";
+        pinIinputField.setCustomValidity('Incorrect PIN');
+        pinIinputField.reportValidity();
+       
     }
 }
 /////////////////////////////////////////////////////
