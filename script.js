@@ -127,15 +127,16 @@ function login() {
 //   console.log('Inside submit button')
 //   mainApp.style.display = "visible";
 // })
-
-gigya.accounts.addEventHandlers({
-            onLogin: closeLogin
-});
-
 const closeLogin = () => {
   alert('Hello');
   mainApp.style.display = "grid";
 }
+
+gigya.accounts.addEventHandlers({
+            onLogin: closeLogin()
+});
+
+
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
