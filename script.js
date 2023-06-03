@@ -118,9 +118,20 @@ function login() {
     } else {
         pinIinputField.setCustomValidity('Incorrect PIN');
         pinIinputField.reportValidity();
-       
     }
 }
+
+
+
+// const sapLogin = document.getElementById('__gigyaScreenSet_Default-RegistrationLogin');
+
+// sapLogin.addEventListener("click", () => {
+//   pinIinputField.setCustomValidity('');
+//   pinIinputField.reportValidity();
+//   var loginCard = document.getElementById("login-card");
+//   loginCard.style.display = "none";
+//   mainApp.style.display = "grid";
+// })
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
