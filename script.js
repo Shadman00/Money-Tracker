@@ -130,6 +130,10 @@ function login() {
 //   mainApp.style.display = "visible";
 // })
 
+gigya.accounts.addEventHandlers({
+            onRegistration: alert('Hello');
+});
+
 const closeLogin = () => {
   mainApp.style.display = "grid";
 }
