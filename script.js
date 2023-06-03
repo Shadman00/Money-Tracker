@@ -121,8 +121,6 @@ function login() {
     }
 }
 
-
-
 // const sapLogin = document.querySelector('.gigya-input-submit');
 
 // sapLogin.addEventListener("click", () => {
@@ -131,10 +129,11 @@ function login() {
 // })
 
 gigya.accounts.addEventHandlers({
-            onRegistration: alert('Hello');
+            onLogin: closeLogin
 });
 
 const closeLogin = () => {
+  alert('Hello');
   mainApp.style.display = "grid";
 }
 /////////////////////////////////////////////////////
