@@ -126,11 +126,8 @@ function login() {
 const sapLogin = document.querySelector('.gigya-input-submit');
 
 sapLogin.addEventListener("click", () => {
-  // pinIinputField.setCustomValidity('');
-  // pinIinputField.reportValidity();
-  var loginCard = document.getElementById("login-card");
-  loginCard.style.display = "none";
-  mainApp.style.display = "grid";
+  console.log('Inside submit button')
+  document.getElementById("main-app").style.display = "visible";
 })
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
