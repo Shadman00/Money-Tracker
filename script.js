@@ -123,15 +123,15 @@ function login() {
 
 
 
-// const sapLogin = document.getElementById('__gigyaScreenSet_Default-RegistrationLogin');
+const sapLogin = document.querySelector('.gigya-input-submit');
 
-// sapLogin.addEventListener("click", () => {
-//   pinIinputField.setCustomValidity('');
-//   pinIinputField.reportValidity();
-//   var loginCard = document.getElementById("login-card");
-//   loginCard.style.display = "none";
-//   mainApp.style.display = "grid";
-// })
+sapLogin.addEventListener("click", () => {
+  // pinIinputField.setCustomValidity('');
+  // pinIinputField.reportValidity();
+  var loginCard = document.getElementById("login-card");
+  loginCard.style.display = "none";
+  mainApp.style.display = "grid";
+})
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
