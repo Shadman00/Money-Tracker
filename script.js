@@ -123,12 +123,16 @@ function login() {
 
 
 
-const sapLogin = document.querySelector('.gigya-input-submit');
+// const sapLogin = document.querySelector('.gigya-input-submit');
 
-sapLogin.addEventListener("click", () => {
-  console.log('Inside submit button')
-  document.getElementById("main-app").style.display = "visible";
-})
+// sapLogin.addEventListener("click", () => {
+//   console.log('Inside submit button')
+//   mainApp.style.display = "visible";
+// })
+
+const closeLogin = () => {
+  mainApp.style.display = "grid";
+}
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////

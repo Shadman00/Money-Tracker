@@ -21,9 +21,9 @@
       <p class="welcome">Log in to get started</p>
       <img src="logo.png" alt="Logo" class="logo" />
       <form class="login">
-        <a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin'});">Login</a>  |  
+        <a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin'});closeLogin()">Login</a>  |  
         <a href="#"
-          onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Login'});">Register</a>
+          onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Login'});closeLogin()">Register</a>
         <!-- <input
           type="text"
           placeholder="user"
